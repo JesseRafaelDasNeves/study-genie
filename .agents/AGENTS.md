@@ -126,3 +126,33 @@ public record TagResponseDTO(UUID id, String name) {
     }
 }
 ```
+
+---
+
+# Regras de Desenvolvimento Frontend Angular (apps/study-frontend)
+
+Sempre siga as seguintes diretrizes ao criar novos recursos (features), interfaces ou configurar rotas no frontend Angular:
+
+## 1. Nomenclatura e Organização de Arquivos
+- **Localização de Funcionalidades (Features)**: Devem ser criadas em subpastas em inglês dentro de `src/app/features/` (ex: `course`, `person`, `auth`).
+- **Interfaces do Modelo de Dados**: Devem ficar no diretório centralizado de interfaces em:
+  `src/app/core/interfaces/` (ex: `course.interface.ts`). O arquivo de interface deve exportar um formato bem estruturado mapeando os campos da API.
+- **Configuração de Rotas de Funcionalidades**:
+  - Cada pasta de recurso deve possuir seu próprio arquivo de rotas específico (ex: `course.routes.ts` ou `person.routes.ts`) exportando as rotas daquela funcionalidade.
+  - O arquivo de rotas global `src/app/app.routes.ts` deve importar as rotas das novas features de forma preguiçosa (Lazy Loading) dentro do arranjo apropriado (ex: `loadChildren: () => import('./features/course/course.routes')`).
+
+## 2. Princípios de Interface de Usuário (UI/UX)
+- **Fidelidade ao Protótipo**: Sempre que for fornecida uma referência ou quando a conexão com o **Google Stitch via MCP** estiver configurada, consulte o protótipo correspondente no Stitch para extrair detalhadamente cores de destaque, tipografia, espaçamentos e estados de exibição (ex: vazio, carregando, erro ou com dados).
+- **Uso Estrito do PrimeNG**: Sempre dê preferência e utilize componentes nativos do PrimeNG (ex: `p-card`, `p-button`, `p-dialog`, `p-tag`, `p-toast`, etc.) em vez de construir elementos HTML/CSS do zero (como criar uma `div` com CSS customizado para simular um card ou modal) sempre que houver um equivalente no PrimeNG.
+
+## 3. Gerenciamento de Estado com Signals
+- **Uso de Signals**: Toda a reatividade local de listagem, estado de carregamento e visibilidade de dialogs ou loaders em novos componentes deve ser implementada preferencialmente com **Angular Signals** (ex: `courses = signal<Course[]>([])`, `loading = signal(false)`).
+- **Escrita de Sinais no HTML/Components**: Ao manipular valores de sinais no template HTML, siga as práticas adequadas do framework:
+  - Para obter o valor: execute a função do sinal `sinal()` (ex: `[visible]="dialogVisible()"`).
+  - Para redefinir ou atualizar valores: use métodos apropriados (`.set()`, `.update()`) (ex: `(onClick)="dialogVisible.set(false)"`, ou `(visibleChange)="dialogVisible.set($event)"` para bindings bidirecionais). Evite tentar atribuir valores diretamente sem usar a API do sinal.
+
+## 4. Injeção de Dependências
+- **Injeção via Construtor**: Toda e qualquer injeção de dependência de serviços e provedores nos componentes do Angular deve ser realizada exclusivamente por meio do construtor da classe (`constructor(...)`), não utilizando a função utilitária `inject()` fora dele.
+
+
+
