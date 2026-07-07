@@ -106,7 +106,7 @@ Baseado no [DATABASE_SCHEMA.md](docs/api-lesson/DATABASE_SCHEMA.md), as tabelas 
 - **Node.js v24.x** & **pnpm** (para executar o front nativo)
 
 > [!NOTE]
-> Para obter instruções detalhadas e específicas de cada ambiente, consulte os respectivos READMEs do [Backend (study-api-lesson)](apps/study-api-lesson/README.md) e do [Frontend (study-frontend)](apps/study-frontend/README.md).
+> Para obter instruções detalhadas e específicas de cada ambiente, consulte os respectivos READMEs do [Backend (study-api-lesson)](https://github.com/JesseRafaelDasNeves/study-api-lesson) e do [Frontend (study-frontend)](https://github.com/JesseRafaelDasNeves/study-frontend).
 
 ---
 
