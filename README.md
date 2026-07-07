@@ -81,6 +81,45 @@ sequenceDiagram
 
 ---
 
+## 📸 Demonstração da Aplicação
+
+Veja abaixo as telas principais do sistema Study Genie:
+
+### 🗂️ Disciplinas e Temas
+Lista principal contendo as disciplinas cadastradas com suas cores de identificação.
+![Lista de Disciplinas](docs/telas/temas-lista-disciplinas.png)
+
+### 📓 Visualização das Aulas
+Lista de aulas agendadas associadas a uma disciplina selecionada.
+![Aulas da Disciplina](docs/telas/tela-aulas.png)
+
+### 📄 Detalhes da Aula (Sem Resumo)
+Visão inicial da aula antes do cadastro de resumo, oferecendo as opções de criação manual ou por IA.
+![Opções de Cadastro](docs/telas/tela-detalhe-aula-cadastrar-resumo.png)
+
+### ✍️ Cadastro de Resumo Manual
+Formulário de preenchimento manual do resumo da aula e tags.
+![Cadastro Manual](docs/telas/tela-cadastrar-resumo-manual.png)
+
+### 🤖 Gerar Resumo por Tópico (IA)
+Geração inteligente e instantânea de resumos a partir de um tema digitado.
+![Geração por Tópico](docs/telas/tela-gerar-resumo-por-topico.png)
+
+### 📁 Gerar Resumo por Arquivo (IA)
+Upload de arquivo PDF/DOCX/TXT com visualização prévia do conteúdo extraído antes de gerar o resumo.
+![Geração por Arquivo](docs/telas/tela-gerar-resumo-arquivo.png)
+
+### 📖 Detalhe da Aula com Resumo
+Visualização final do resumo gerado com tópicos estruturados e tags associadas.
+![Aula com Resumo](docs/telas/tela-detale-aula-resumo.png)
+
+### 🔍 Busca de Resumos
+Painel de busca avançada por texto, filtros por disciplina/aula/tags e ordenação dos resultados.
+![Busca de Resumos](docs/telas/tela-busca-resumos.png)
+
+
+---
+
 ## 📁 Modelo de Banco de Dados
 
 Baseado no [DATABASE_SCHEMA.md](docs/api-lesson/DATABASE_SCHEMA.md), as tabelas principais são estruturadas com chaves primárias em formato `UUID` gerados automaticamente:
