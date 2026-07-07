@@ -6,6 +6,17 @@ A aplicação foi desenvolvida em conformidade com o desafio do **SeniorLabs**, 
 
 ---
 
+## 🤖 Diretrizes e Automação do Agente (`AGENTS.md`)
+
+Este projeto foi construído em colaboração com um Agente de IA. Para garantir a consistência arquitetural do código, a padronização das APIs Rest em Java e a aderência aos padrões reativos modernos no frontend Angular, foi criado o arquivo de regras e padrões customizados em [.agents/AGENTS.md](.agents/AGENTS.md).
+
+### Por que o `AGENTS.md` foi criado?
+- **Padronização Estrita no Backend**: Forçar que todos os controladores Java residam no pacote `controller`, enquanto o restante das entidades (DTOs, Repositórios, Models) fiquem em pacotes específicos de domínio, além de garantir o uso de registros (`record`) para DTOs e UUIDs como chaves primárias.
+- **Práticas Modernas no Frontend**: Assegurar a organização das funcionalidades em Feature Folders sob lazy-loading, o uso do PrimeNG como UI Kit principal e a implementação obrigatória de reatividade através de **Angular Signals** e injeções de dependência limpas via construtor.
+- **Alinhamento do Agente**: Esse arquivo serve como uma "âncora de contexto" para que qualquer agente de desenvolvimento de IA trabalhando neste repositório siga exatamente as mesmas convenções e estilos pré-estabelecidos pelo projeto, mitigando retrabalho e desvios de padrão.
+
+---
+
 ## 🏗️ Arquitetura da Solução
 
 Para manter a segurança das credenciais, as requisições de Inteligência Artificial são centralizadas no backend. O fluxo de geração segue o seguinte modelo:
