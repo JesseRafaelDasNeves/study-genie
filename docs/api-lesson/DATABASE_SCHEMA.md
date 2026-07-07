@@ -57,6 +57,7 @@ erDiagram
     SUMMARY {
         uuid id PK
         uuid lessonId FK
+        string title
         text content
         string source "UPLOADED_FILE | TOPIC | MANUAL"
         timestamp createdAt
@@ -110,6 +111,7 @@ erDiagram
 |-------|------|-----------|
 | `id` | UUID | Identificador único |
 | `lessonId` | UUID (FK) | Obrigatório |
+| `title` | String | Opcional, tamanho entre 3 e 20 caracteres |
 | `content` | Text | Obrigatório |
 | `source` | Enum | Obrigatório (valores: `UPLOADED_FILE`, `TOPIC`, `MANUAL`) |
 | `createdAt` | Timestamp | Opcional |
