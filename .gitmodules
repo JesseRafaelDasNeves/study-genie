@@ -1,6 +1,8 @@
 [submodule "apps/study-api-lesson"]
 	path = apps/study-api-lesson
 	url = https://github.com/JesseRafaelDasNeves/study-api-lesson.git
+	branch = main
 [submodule "apps/study-frontend"]
 	path = apps/study-frontend
 	url = https://github.com/JesseRafaelDasNeves/study-frontend.git
+	branch = main
