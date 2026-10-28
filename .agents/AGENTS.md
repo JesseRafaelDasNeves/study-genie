@@ -144,6 +144,7 @@ Sempre siga as seguintes diretrizes ao criar novos recursos (features), interfac
 ## 2. Princípios de Interface de Usuário (UI/UX)
 - **Fidelidade ao Protótipo**: Sempre que for fornecida uma referência ou quando a conexão com o **Google Stitch via MCP** estiver configurada, consulte o protótipo correspondente no Stitch para extrair detalhadamente cores de destaque, tipografia, espaçamentos e estados de exibição (ex: vazio, carregando, erro ou com dados).
 - **Uso Estrito do PrimeNG**: Sempre dê preferência e utilize componentes nativos do PrimeNG (ex: `p-card`, `p-button`, `p-dialog`, `p-tag`, `p-toast`, etc.) em vez de construir elementos HTML/CSS do zero (como criar uma `div` com CSS customizado para simular um card ou modal) sempre que houver um equivalente no PrimeNG.
+- **Consulta ao MCP do PrimeNG (`primeng`)**: Ao implementar ou modificar componentes do PrimeNG, sempre utilize as ferramentas do servidor MCP `primeng` (`get_component`, `get_example`, `search`, `validate_usage`, etc.) para consultar a documentação oficial atualizada, metadados da API Angular (inputs, outputs, templates), tokens de estilização e exemplos antes de escrever o código, evitando propriedades depreciadas ou sintaxes incorretas.
 
 ## 3. Gerenciamento de Estado com Signals
 - **Uso de Signals**: Toda a reatividade local de listagem, estado de carregamento e visibilidade de dialogs ou loaders em novos componentes deve ser implementada preferencialmente com **Angular Signals** (ex: `courses = signal<Course[]>([])`, `loading = signal(false)`).
